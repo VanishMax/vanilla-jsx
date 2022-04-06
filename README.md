@@ -5,7 +5,7 @@
 
 ##
 
-**The app is a proof-of-concept of how you can use the JSX in vanilla TypeScript + Vite project, no framework needed!**
+The app is a proof-of-concept of how you can use the JSX in vanilla TypeScript + Vite project, no framework needed!
 
 This project is for you, if you:
 
@@ -19,7 +19,7 @@ Like in any Node.js app, install dependencies and run the `dev` script:
 
 ```bash
 npm install
-npm dev
+npm run dev
 ```
 
 Now you can go to `http://localhost:3000` and try adding your JSX code, while enjoying HMR and TypeScript.
