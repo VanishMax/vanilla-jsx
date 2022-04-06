@@ -1,6 +1,12 @@
-# Vanilla JSX
+###
 
-The app is an example of how you can use the JSX in vanilla TypeScript + Vite project. With Vanilla JSX you can, without any framework, write the following:
+<img align="right" src="./public/readme-icon.svg" />
+<img src="./public/readme-title.svg" />
+
+## 
+
+
+The app is a proof-of-concept of how you can use the JSX in vanilla TypeScript + Vite project, no framework needed!
 
 ```tsx
 import { h } from '../pragma';
@@ -28,7 +34,7 @@ This project is for you, if you:
 
 **JSX** is basically a syntactic extension over JS, and, just like TypeScript, it needs to be compiled.
 
-![JSX Code transformation: from code to typescript parser, vite bundler, into the Vanilla JS code](./flowchart.png)
+![JSX Code transformation: from code to typescript parser, vite bundler, into the Vanilla JS code](public/flowchart.png)
 
 The flowchart shows that, to get the vanilla JS code from JSX, we need to instruct the TypeScript or Vite (in case the project is without TS) compilers to parse the JSX and transform it to the required form. So, what instructions do they need? Well, all the TypeScript need (in `tsconfig.json`) is:
 
