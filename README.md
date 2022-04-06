@@ -1,28 +1,11 @@
 ###
 
-<img align="right" src="./public/readme-icon.svg" />
+<img align="right" src="./public/readme-icon.svg" alt="Vanilla JSX" />
 <img src="./public/readme-title.svg" />
 
-## 
+##
 
-
-The app is a proof-of-concept of how you can use the JSX in vanilla TypeScript + Vite project, no framework needed!
-
-```tsx
-import { h } from '../pragma';
-import { LikeComponent } from './like';
-
-const App = (
-  <main className="hello">
-    <h1>
-      Hello JSX!
-    </h1>
-    <LikeComponent big />
-  </main>
-);
-
-export default App;
-```
+**The app is a proof-of-concept of how you can use the JSX in vanilla TypeScript + Vite project, no framework needed!**
 
 This project is for you, if you:
 
@@ -30,13 +13,24 @@ This project is for you, if you:
 * 🕵️‍♂️ Curious about front-end fundamentals
 * 🤓 A geek who loves vanilla TypeScript and all around it
 
-## So how does it work?
+## How to run?
+
+Like in any Node.js app, install dependencies and run the `dev` script:
+
+```bash
+npm install
+npm dev
+```
+
+Now you can go to `http://localhost:3000` and try adding your JSX code, while enjoying HMR and TypeScript.
+
+## How does it work?
 
 **JSX** is basically a syntactic extension over JS, and, just like TypeScript, it needs to be compiled.
 
 ![JSX Code transformation: from code to typescript parser, vite bundler, into the Vanilla JS code](public/flowchart.png)
 
-The flowchart shows that, to get the vanilla JS code from JSX, we need to instruct the TypeScript or Vite (in case the project is without TS) compilers to parse the JSX and transform it to the required form. So, what instructions do they need? Well, all the TypeScript need (in `tsconfig.json`) is:
+The flowchart shows that, to get the vanilla JS code from JSX, we need to instruct the TypeScript or Vite (in case the project is without TS) compilers to parse the JSX and transform it into the required form. So, what instructions do they need? Well, all the TypeScript need (in `tsconfig.json`) is:
 
 ```json
 {
@@ -98,26 +92,14 @@ export const h = (tag: Tag, props: Props, ...children: Children) => {
 };
 ```
 
-As you can see, all the Pragma does is goes through the parsed JSX and creates DOM elements with correct attributes and children. This allows the magic to happen when you import the `h` to your functional components.
+As you can see, all the Pragma does is go through the parsed JSX and create DOM elements with correct attributes and children. This allows the magic to happen when you import the `h` to your functional components. That's it!
 
-This is it! You are good to go into the JSX world! If you are interested, I have **a task for you**: create a `CounterComponent` that simply displays decrease and increase buttons and the counter itself. It might teach you the principles of reactivity 🏎
+## Limitations
 
-## How to run?
+Vanilla JSX requires you a lot of engineering if you want to create a bigger app than this example. At least, making any component interactive would make you re-invent the reactivity. For example, a simple button that changes the view might require additional logic to Pragma: wrappers around event listeners, tracking the changes, etc.
 
-Firstly, install the dependencies:
+If you are interested, I have **a task for you**: create a `CounterComponent` that simply displays decrease and increase buttons and the counter itself. It might teach you the principles of reactivity 🏎
 
-```bash
-npm install
-```
-
-And start the application:
-
-```bash
-npm run dev
-```
-
-It will bind the app to `http://localhost:3000`.
-
-## Copyright
+## License
 
 Licensed by the terms of [the MIT license](./LICENSE)
