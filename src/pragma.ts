@@ -1,5 +1,5 @@
 type Tag = string | ((props: any, children: any[]) => JSX.Element);
-type Props = Record<string, string | number | null | undefined> | null;
+type Props = Record<string, string> | null;
 type Children = (Node | string)[];
 
 export const h = (tag: Tag, props: Props, ...children: Children) => {
@@ -17,7 +17,7 @@ export const h = (tag: Tag, props: Props, ...children: Children) => {
         return;
       }
 
-      (el as any)[key as keyof HTMLElement] = val;
+      el.setAttribute(key, val);
     });
   }
 

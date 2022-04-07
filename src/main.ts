@@ -1,5 +1,5 @@
 import './style.css';
-import App from './components/app';
+import { App } from './components/app';
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 
