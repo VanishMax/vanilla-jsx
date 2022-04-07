@@ -26,6 +26,8 @@ Now you can go to `http://localhost:3000` and try adding your JSX code, while en
 
 ## How does it work?
 
+**Notice**: full explanation of Vanilla JSX is [posted on Habr](https://habr.com/ru/post/659483/) (Russian language).
+
 **JSX** is basically a syntactic extension over JS, and, just like TypeScript, it needs to be compiled.
 
 ![JSX Code transformation: from code to typescript parser, vite bundler, into the Vanilla JS code](public/flowchart.png)
